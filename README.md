@@ -1,59 +1,109 @@
-# CustomCursor
+# AfnaanNgx Custom Cursor
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.7.
+A customizable animated cursor for Angular applications. Enhance user experience with a stylish and interactive cursor effect.
 
-## Development server
+## 🚀 Installation
 
-To start a local development server, run:
+Install the package using npm:
+```sh
+npm install afnaan-ngx-custom-cursor
+```
 
-```bash
+## 📌 Usage
+
+### **1️⃣ Import the Component**
+Since this is a **standalone component**, import it directly in your Angular component:
+
+```ts
+import { Component } from '@angular/core';
+import { AfnaanNgxCustomCursorComponent } from 'afnaan-ngx-custom-cursor';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [AfnaanNgxCustomCursorComponent],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.scss'
+})
+export class AppComponent {
+  title = 'My Angular App';
+}
+```
+
+### **2️⃣ Add the Custom Cursor to Your Template**
+```html
+<lib-afnaan-ngx-custom-cursor></lib-afnaan-ngx-custom-cursor>
+<router-outlet></router-outlet>
+```
+
+## 🎨 Customization
+
+### **Change Cursor Image**
+Pass a custom cursor image as an input:
+```html
+<lib-afnaan-ngx-custom-cursor cursorImage="https://your-image-url.com/cursor.png"></lib-afnaan-ngx-custom-cursor>
+```
+
+### **Reduce Cursor Size**
+By default, the cursor size is **32px**. You can change its size using **CSS or SCSS**:
+
+#### **Using CSS (Global Styles in styles.scss or styles.css)**
+```css
+lib-afnaan-ngx-custom-cursor #cursor {
+  width: 16px !important;  /* Adjust size */
+  height: 16px !important;
+}
+
+lib-afnaan-ngx-custom-cursor #cursor img {
+  width: 100% !important;
+  height: 100% !important;
+}
+```
+
+#### **Using SCSS (Component Styles)**
+```scss
+::ng-deep lib-afnaan-ngx-custom-cursor #cursor {
+  width: 16px !important;
+  height: 16px !important;
+}
+
+::ng-deep lib-afnaan-ngx-custom-cursor #cursor img {
+  width: 100% !important;
+  height: 100% !important;
+}
+```
+
+## 🛠 Development
+
+### **Start a Local Development Server**
+```sh
 ng serve
 ```
+Then, open your browser and navigate to: [http://localhost:4200/](http://localhost:4200/)
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
+### **Build the Project**
+```sh
 ng build
 ```
+The build artifacts will be stored in the `dist/` directory.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
+### **Run Unit Tests**
+```sh
 ng test
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
+### **Run End-to-End Tests**
+```sh
 ng e2e
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## 📖 Additional Resources
+- [Angular CLI Overview](https://angular.io/cli)
+- [AfnaanNgx Custom Cursor GitHub](https://github.com/afnaanulla/AfnaanNgx-cusotm-cursor)
 
-## Additional Resources
+## 📜 License
+This project is licensed under the **MIT License**.
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
+💡 **Created by [Afnaan Ullah](https://github.com/afnaanulla)** 🚀
+
